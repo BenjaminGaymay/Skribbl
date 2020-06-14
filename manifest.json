@@ -1,0 +1,30 @@
+{
+
+	"manifest_version": 2,
+	"name": "WordSolver",
+	"version": "1.6",
+
+	"description": "Waouh on cheat sur Scribbl.io",
+	"homepage_url": "https://github.com/BenjaminGaymay",
+	"icons": {
+	  "48": "icons/48px.png",
+	  "96": "icons/96px.png"
+	},
+
+	"permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+	"content_scripts": [
+    {
+      "matches": ["*://*.skribbl.io/*"],
+      "js": ["content_scripts/solver.js"]
+    }
+  ],
+
+	"web_accessible_resources": [
+	  "words/french.txt"
+	]
+
+}
